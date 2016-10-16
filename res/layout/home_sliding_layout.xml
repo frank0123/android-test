@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:imagecontrol="http://schemas.android.com/apk/res/com.example.myandroid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sliding_bgp">
+    <!--head block-->
+    <RelativeLayout
+            android:id="@+id/head_block"
+            android:layout_marginTop="45dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <!--head image-->
+        <com.example.utils.RoundImageUtil
+                android:id="@+id/head_img"
+                android:layout_marginLeft="15dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                imagecontrol:border_inside_color="#fff7f2e9"
+                imagecontrol:border_outside_color="#ffd5d1c8"
+                imagecontrol:border_thickness="2dp"/>
+        <!--nick name-->
+        <TextView
+                android:id="@+id/nick_name"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:text="Shake the pear"/>
+        <!--level icon-->
+        <TextView
+                android:id="@+id/level_txt"
+                android:layout_marginTop="42dp"
+                android:layout_marginLeft="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#990000"
+                android:textSize="7sp"
+                android:textColor="#ffffff"
+                android:textStyle="italic"
+                android:text="LV1"/>
+        <!--level count image-->
+        <ImageView
+                android:id="@+id/level_icon"
+                android:layout_marginTop="41dp"
+                android:layout_toEndOf="@+id/level_txt"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:src="@drawable/level_test"/>
+        <!--motto quotation left image-->
+        <com.example.utils.RoundImageUtil
+                android:id="@+id/motto_left_quotation_img"
+                android:layout_marginTop="75dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/motto_left_quotation_mark"/>
+        <!--motto-->
+        <TextView
+                android:id="@+id/motto"
+                android:layout_marginTop="76dp"
+                android:layout_marginLeft="26dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:text="你想要的是一个星空吗？"/>
+        <!--motto quotation right image-->
+        <com.example.utils.RoundImageUtil
+                android:id="@+id/motto_right_quotation_img"
+                android:layout_marginTop="75dp"
+                android:layout_toEndOf="@+id/motto"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/motto_right_quotation_mark"/>
+    </RelativeLayout>
+    <!--bottom block-->
+    <RelativeLayout
+            android:id="@+id/bottom_block"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+        <LinearLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+            <!--weather block-->
+            <RelativeLayout
+                    android:id="@+id/weather_block"
+                    android:layout_marginLeft="195dp"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true">
+                <!--weather gif-->
+                <com.example.utils.GifUtil
+                        android:id="@+id/weather_gif"
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:enabled="false"/>
+                <!--temperature-->
+                <TextView
+                        android:id="@+id/temperature"
+                        android:layout_marginTop="30dp"
+                        android:gravity="right"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:text="17℃"/>
+                <!--location-->
+                <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:text="北京市 朝阳区"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
